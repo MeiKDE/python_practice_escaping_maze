@@ -5,14 +5,24 @@ def turn_right():
     turn_left()
     turn_left()
 
+while front_is_clear():
+    move()
+turn_left()
+    
 while not at_goal(): 
-    if (right_is_clear()==True) and front_is_clear()==True:
+    if right_is_clear():
+        turn_right()
         move()
-    elif front_is_clear()==True:
+    elif front_is_clear():
         move()
-        if right_is_clear()==True:
-            turn_right()
-    elif wall_in_front()==True:
-        turn_left()
     else:
-        done()
+        turn_left()
+
+        
+
+        
+ 
+
+        
+        
+    
